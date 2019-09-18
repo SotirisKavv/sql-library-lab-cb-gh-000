@@ -41,5 +41,6 @@ end
 def select_character_names_and_number_of_books_they_are_in
   "select characters.name from characters
   inner join character_books on character_books.character_id = characters.id
-  join books on character_books.book_id = books.id"
+  join books on character_books.book_id = books.id
+  group by characters.name"
 end
