@@ -33,7 +33,7 @@ def select_series_title_with_most_human_characters
   join series on books.series_id = series.id
   where characters.species = 'human'
   group by series.title
-  order by count(*);
+  order by count(*) desc
   limit 1;"
 
 end
